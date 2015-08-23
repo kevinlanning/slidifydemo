@@ -3,7 +3,7 @@
 title: "Assessing skills in Computational Social Science"
 author: "Kevin Lanning"
 highlighter: highlight.js
-output: html_document
+output: pdf_document
 job: null
 knit: slidify::knit2slides
 mode: selfcontained
