@@ -32,17 +32,24 @@ A second limitation is that the model implicitly treats the requisite skills as 
 
 ---
 
-## Data Science ~ (Stats, Computing, Substance, Communication)
+## Data Science ~ (Math, Hacking, Substance, Writing)
 
-If skills in math, hacking, substance, and writing are continuous, and Data Science requires these and only these skills, then it is implied that expertise in Data Science is given by a function such as that specified above.
+If skills in math (M), hacking (H), substance (S), and writing (W) are continuous, and Data Science requires these and only these skills, then it is implied that expertise in Data Science is given by a function such as that specified above. 
 
-It is beyond the scope of this assignment to empirically develop this equation, but I will speculate that the model is not a simple additive one, for some minimum level of skill is needed in each of the four areas.  That is, persons and teams which don't have at least a minimum level of skill in each cannot make important contributions to Data Science. 
+It is beyond the scope of this assignment to empirically develop this equation, but its likely that it includes a non-additive component, as some minimum level of skill is needed in each of the four areas. Ignoring differential weights for the skills, a model which satisfies this rule might look something like the following:
+
+```r
+M <- 3; C <- 3; S <- 3; W <- 0; 
+DataSci <- (.1*M*C*S*W) * (M+C+S+W)
+```
+Here, when one of the four skills is zero, so too is the estimated assessment of the project in Data Science:
+DataSci = 0. But if W is changed from 0 to 1, the score for DataSci would increase to  2.7.
 
 ---
 
 ## Assessing skills in Computational Social Science
 
-In the present application, I apply this logic to a simple tool for assessing the capacities of individuals and teams in one area of Data Science, namely, Computational Social Science. The tool asks individuals to rate themselves on the four skills, then (a) plots the response and (b) provides an assessment/recommendation.
+In the present application, I apply this logic (though not this exact equation) to a simple tool for assessing the capacities of individuals and teams in one area of Data Science, namely, Computational Social Science. The tool asks individuals to rate themselves on the four skills, then (a) plots the response and (b) provides an assessment/recommendation.
 
 It is believed that tools such as this could ultimately help build effective teams of scholars and reviewers in Computational Social Science.  The code and application may be found at the links provided below:
 
