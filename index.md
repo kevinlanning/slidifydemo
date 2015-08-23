@@ -15,8 +15,7 @@ widgets: []
 
 ## The Venn Diagram model of Data Science
 <div style='text-align: center;'>
-    <img height='204' src='
-http://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png' />
+    <img height='204' src='Data_Science_VD.png' />
 </div>
 
 In an early lecture, the Hopkins/Data Science team described Data Science in a Venn diagram as lying at the intersection of three domains of "Math and Statistics Knowledge", "Hacking Skills", and "Substantive Experience."
