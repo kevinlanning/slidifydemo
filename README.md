@@ -1,2 +1,2 @@
 #slidifydemo 
-Slidify output at Index.md
+Slidify output at index.md
